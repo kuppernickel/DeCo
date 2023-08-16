@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <header id="responsive_nav" style="background-image: none; height: 0;">
+    <header style="background-image: none; height: 0;">
         <div id="main-nav"></div>
     </header>
     
@@ -70,10 +70,12 @@
                         <h2>profile</h2>
                         <div class="divider divider-sm"></div>
                         <div style="font-size: 1.2em;">
-                            <b>名前&nbsp;&#124;&nbsp;</b>藤田 宗一郎&nbsp;様
+                            <b>氏名&nbsp;&#124;&nbsp;</b>藤田 宗一郎&nbsp;様
                             <br>
                             <b>所属&nbsp;&#124;&nbsp;</b>
                                 <span style="font-family: 'Lato', sans-serif;">FUJI GLOBAL LOGISTICS</span> 取締役
+                            <br>
+                            <b>出身国&nbsp;&#124;&nbsp;</b>日本
                             <br>
                             <b>海外勤続年数&nbsp;&#124;&nbsp;</b>中国(約14年)、韓国(約3年)
                         </div>
@@ -119,7 +121,7 @@
                     </a>
                 </figure>
                 <figure class="mix QnA col-md-4 col-sm-6 col-xs-12  " id="Q3">
-                    <a href="javascript:void(0);" class="filter wipe" data-filter="#Q3"style="background-image: url(./img/png/communication.png);">
+                    <a href="javascript:void(0);" class="filter wipe" data-filter="#Q3" style="background-image: url(./img/png/communication.png);">
                         <div class="question">
                             <img class="img-responsive" src="img/QnA/003.png" style="width: 50px;"/>
                             <p>海外でコミュニケーション的に困った経験はありますか。</p>
@@ -258,7 +260,7 @@
                     </a>
                 </figure>
                 <figure class="mix QnA col-md-4 col-sm-6 col-xs-12  " id="Q10">
-                    <a data-scroll href="javascript:void(0);" class="filter wipe" data-filter="#Q10" style="background-image: url(./img/png/star.png);">
+                    <a href="javascript:void(0);" class="filter wipe" data-filter="#Q10" style="background-image: url(./img/png/star.png);">
                         <div class="question">
                             <img class="img-responsive" src="img/QnA/010.png" style="width: 50px;"/>
                             <p>最後に、私たちのテーマは「海外で働いている社会人としての自己管理」という事で、
@@ -290,7 +292,7 @@
                             それがいけないことだと気づくようになりました。
                             と営業について詳しく聞けてよかったです。</span>
                             <span class="tail tail_left"></span>
-                        </div>
+                        </div> 
                     </figure>
                     <figure class="mix epilogue col-md-12" >
                         <img class="hyerin ep" src="img/png/hyerin.png" style="width: 100px; float: right;">
@@ -306,7 +308,7 @@
                             </div>
                     </figure>
                     <figure class="mix epilogue col-md-12">
-                        <img class="heajin ep" src="img/png/haejin.png" style="width: 100px; float: left;">
+                        <img class="haejin ep" src="img/png/haejin.png" style="width: 100px; float: left;">
                         <br>
                         <div class="comment comment_left">
                             <span>自分と似たような考え方を持つ方だと感じて、共感するところが多いインタビューでした。
@@ -318,8 +320,7 @@
                         <img class="youngchan ep" src="img/png/youngchan.png" style="width: 100px; float: right;">
                             <br>
                             <div class="comment comment_right">
-                                <span>
-                                どの環境でも以前の環境と比べずに今の環境で最善を尽くすことが大事って言う言葉が心に刻みました。</span>
+                                <span>どの環境でも以前の環境と比べずに今の環境で最善を尽くすことが大事って言う言葉が心に刻みました。</span>
                                 <span class="tail tail_right"></span>
                             </div>
                     </figure>
@@ -336,7 +337,7 @@
             const defaultFilter = 'profile';
             const defaultFilterButton = document.querySelector(`[data-filter=".${defaultFilter}"]`);
 
-            // 클릭 이벤트 호출
+            // call click event
             defaultFilterButton.click();
         });
     </script>
