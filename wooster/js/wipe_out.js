@@ -14,7 +14,7 @@ $('.wipe').click(function(){
               width: '100%',
               height: '100%',
               opacity: '1',
-          },1200,'easeInOutQuad'
+          },1200
       );
       $('.QnA .exit').css('display','inline-block');
     }
