@@ -442,7 +442,7 @@ textarea.form-control{
 }
 
 .btn-primary{
-	background: transparent;
+	background: rgba(255, 255, 255, 0.4);
 	border:1px solid #000;
 	color: #000;
 }
@@ -749,6 +749,9 @@ RESPONSIVE
 }
 
 @media (max-width: 767px){
+	header{
+		background-position: 40%;
+	}
 	.responsive_nav{
 		transform: translateY(170px);
 		transition: all 0.5s ease-in-out;
