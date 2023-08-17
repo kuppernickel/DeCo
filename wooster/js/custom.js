@@ -63,17 +63,33 @@ function responsive_nav(){
     // console.log(CurrentFileName);
     if((CurrentFileName!='index') && ($(window).width() < 768)){
         if($('#portfolio').hasClass('responsive_nav')===true){
+            $('.primary-menu').css('pointer-events', 'none');
             console.log(document.getElementById('portfolio').className);
             $('#portfolio').removeClass('responsive_nav');
             $('#main-footer').removeClass('responsive_nav');
             $('#portfolio').addClass('responsive_nav_fixed');
             $('#main-footer').addClass('responsive_nav_fixed');
+            $('.responsive_drop').animate({
+                    height: '100%'
+                }
+            );
+            $('.drop').animate({
+                height: 0,
+                opacity: 0
+            }, 300);
+            $('.navbar-nav').children().first().removeClass('responsive_drop');
+            $('.navbar-nav').children().last().removeClass('responsive_drop');
+            $('.responsive_drop').css('overflow', 'visible');
+            $('.responsive_drop a').css('overflow', 'visible');
+            setTimeout(drop_callback,600);
         }else{
+            $('.primary-menu').css('pointer-events', 'none');
             console.log(document.getElementById('portfolio').className);
             $('#portfolio').removeClass('responsive_nav_fixed');
             $('#main-footer').removeClass('responsive_nav_fixed');
             $('#portfolio').addClass('responsive_nav');
             $('#main-footer').addClass('responsive_nav');
+            setTimeout(drop_callback,600);
         }
     }
 }
@@ -94,7 +110,7 @@ function responsive_drop(){
             $('.drop').animate({
                 height: 0,
                 opacity: 0
-            }, 300, drop_callback());
+            }, 300, drop_callback);
             $('.navbar-nav').children().first().removeClass('responsive_drop');
             $('.navbar-nav').children().last().removeClass('responsive_drop');
             $('.responsive_drop').css('overflow', 'visible');
@@ -113,7 +129,7 @@ function responsive_drop(){
                 display: 'block',
                 height: '98px',
                 opacity: 1
-            }, 1000, drop_callback());
+            }, 1000, drop_callback);
         }
     }
 }
