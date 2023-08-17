@@ -59,7 +59,9 @@ $(function(){
 });
 
 function responsive_nav(){
-    if($(window).width() < 768){
+    let CurrentFileName = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.lastIndexOf("."));
+    // console.log(CurrentFileName);
+    if((CurrentFileName!='index') && ($(window).width() < 768)){
         if($('#portfolio').hasClass('responsive_nav')===true){
             console.log(document.getElementById('portfolio').className);
             $('#portfolio').removeClass('responsive_nav');
@@ -72,6 +74,46 @@ function responsive_nav(){
             $('#main-footer').removeClass('responsive_nav_fixed');
             $('#portfolio').addClass('responsive_nav');
             $('#main-footer').addClass('responsive_nav');
+        }
+    }
+}
+
+function drop_callback(){
+    console.log('callback');
+    $('.primary-menu').css('pointer-events', 'auto');
+}
+
+function responsive_drop(){
+    if($(window).width() < 768){
+        if($('.navbar-nav').children().first().hasClass('responsive_drop')===true){
+            $('.primary-menu').css('pointer-events', 'none');
+            $('.responsive_drop').animate({
+                    height: '100%'
+                }
+            );
+            $('.drop').animate({
+                height: 0,
+                opacity: 0
+            }, 300, drop_callback());
+            $('.navbar-nav').children().first().removeClass('responsive_drop');
+            $('.navbar-nav').children().last().removeClass('responsive_drop');
+            $('.responsive_drop').css('overflow', 'visible');
+            $('.responsive_drop a').css('overflow', 'visible');
+        }else{
+            $('.primary-menu').css('pointer-events', 'none');
+            $('.navbar-nav').children().first().addClass('responsive_drop');
+            $('.navbar-nav').children().last().addClass('responsive_drop');
+            $('.responsive_drop').css('overflow', 'hidden');
+            $('.responsive_drop a').css('overflow', 'hidden');
+            $('.responsive_drop').animate({
+                    height: 0
+                }
+            );
+            $('.drop').animate({
+                display: 'block',
+                height: '98px',
+                opacity: 1
+            }, 1000, drop_callback());
         }
     }
 }

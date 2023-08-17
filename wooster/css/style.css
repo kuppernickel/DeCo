@@ -5,21 +5,12 @@
 	height: 0;
 	opacity: 0;
 }
-#interview:hover .drop{
-	display: block;
-	height: 98px;
-	opacity: 1;
-	transition: all 0.5s;
-}
 .drop{
 	padding-left: 0;
 	padding-top: 8px;
 }
 .navbar-wooster .drop{
 	background-color: #fff;
-}
-.drop li:hover{
-	background-color: #eee;
 }
 .drop li{
 	text-align: center !important;
@@ -736,6 +727,15 @@ RESPONSIVE
 		opacity: 1;
 	}
 
+	#interview:hover .drop{
+		height: 98px;
+		opacity: 1;
+		transition: all 0.5s;
+	}
+	.drop li:hover{
+		background-color: #eee;
+	}
+
 	#profile_img{
 		margin-left: 10%;
 	}
@@ -773,7 +773,9 @@ RESPONSIVE
 	}
 	.drop{
 		padding-top: 0;
+		background-color: transparent;
 	}
+	
 
 	#portfolio{
 		margin-top: 20px;
