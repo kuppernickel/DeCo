@@ -22,6 +22,18 @@
 	display: block;
 }
 
+/* slogan */
+#slogan:hover span{
+	display: none
+}
+#slogan:hover:before{
+	white-space: pre-wrap;
+	font-family: 'Kosugi', sans-serif;
+	line-height: 1.5em;
+	font-size: 1.1em;
+	content: '「自分の努力とみんなの協働で不安を成長の糧にしてマイペースで未来につなぐ。\Aそれぞれのゴール、その先へ。」';
+}
+
 /* footer */
 .bufs_link{
 	display: block;
