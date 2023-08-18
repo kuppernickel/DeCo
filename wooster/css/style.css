@@ -22,6 +22,16 @@
 	display: block;
 }
 
+/* scroll to top */
+#scroll_top{
+	position: fixed;
+	bottom: 80px;
+	right: 5%;
+	z-index: 500;
+	text-decoration: none;
+	border-radius: 50%;
+}
+
 /* slogan */
 #slogan:hover span{
 	display: none
