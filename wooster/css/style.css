@@ -872,15 +872,14 @@ RESPONSIVE
 
 @media (min-width: 1400px){
 	.interview_link{
-		/* height: 100px; */
 		bottom: 40%;
+		margin-top: -150px;
 	}
 	.interview_link span{
 		padding: 0 5px 0 20px;
 		letter-spacing: 2px;
 		top: 50px;
 		writing-mode: vertical-rl;
-		/* color: #888; */
 	}
 	.interview_link img{
 		width: 15px;
