@@ -149,6 +149,24 @@
    position: relative;
 }
 
+#epilogue{
+	padding: 0 5%;
+	display: flex;
+	justify-content: center;
+}
+.bxslider div:not(.epilogue_content):not(.epilogue_img_wrapper){
+	padding: 30px 50px;
+}
+.epilogue_content{
+	margin: 30px 10px 0 10px;
+	max-height: 500px;
+}
+.epilogue_img_wrapper{
+	width: 200px;
+	height: auto;
+	float: left;
+}
+
 /* qna */
 .QnA a{
 	font-size: 1.1em;
@@ -822,6 +840,13 @@ RESPONSIVE
 	#profile_img img{
 		float: none;
 		width: 100%;
+	}
+
+	.epilogue_img_wrapper{
+		float: none;
+		width: 100%;
+		display: flex;
+		justify-content: center;
 	}
 }
 
