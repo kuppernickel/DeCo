@@ -192,10 +192,10 @@
 	font-weight: bold;
 }
 .QnA .question.even {
-	background-color: rgba(255,255,255,0.9);
+	background-color: rgba(250,250,250,0.9);
 }
 .QnA .question.odd {
-	background-color: rgba(230,230,230,0.9);
+	background-color: rgba(240,240,240,0.92);
 }
 
 
@@ -229,12 +229,12 @@
 }
 
 .link_responsive{
-	position: fixed;
+	position: sticky;
 	z-index: 1000;
 }
 .interview_link{
-	position: fixed;
-	z-index: 3000;
+	position: sticky;
+	z-index: 3000 !important;
 }
 .interview_link a{
 	text-decoration: none;
@@ -839,6 +839,14 @@ RESPONSIVE
 	.slide .image-wrap img{
 		width: 200px;
 	}
+
+	.responsive_nav.links{
+		bottom: 170px;
+		/* transition: none; */
+	}
+	.links{
+		/* transition: none; */
+	}
 	
 
 	#portfolio{
@@ -864,13 +872,15 @@ RESPONSIVE
 
 @media (min-width: 1400px){
 	.interview_link{
-		top: 40%;
+		/* height: 100px; */
+		bottom: 40%;
 	}
 	.interview_link span{
 		padding: 0 5px 0 20px;
 		letter-spacing: 2px;
 		top: 50px;
 		writing-mode: vertical-rl;
+		/* color: #888; */
 	}
 	.interview_link img{
 		width: 15px;
@@ -878,13 +888,15 @@ RESPONSIVE
 		top: 40px;
 	}
 	#link_prev{
-		left: 5%;
+		margin-left: 5%;
+		float: left;
 	}
 	#link_prev img{
 		transform: rotate(180deg);
 	}
 	#link_next{
-		right: 5%;
+		margin-right: 5%;
+		float: right;
 	}
 	#link_prev:hover{
 		transform: translate(-10px);
@@ -904,7 +916,7 @@ RESPONSIVE
 	}
 	.interview_link{
 		bottom: 0;
-		margin: 20px 0;
+		padding: 20px 0;
 	}
 	.interview_link span{
 		padding: 0 5px 0 20px;
@@ -916,13 +928,15 @@ RESPONSIVE
 		height: 20px;
 	}
 	#link_prev{
-		left: 3%;
+		float: left;
+		margin-left: 5%;
 	}
 	#link_prev img{
 		transform: rotate(180deg);
 	}
 	#link_next{
-		right: 5%;
+		float: right;
+		margin-right: 5%;
 	}
 	#link_prev:hover{
 		transform: translate(-10px);
