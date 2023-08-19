@@ -572,6 +572,10 @@ PORTFOLIO
 	float: left;
 }
 
+.nav-pills > li:first-child{
+	margin-left: 20px;
+}
+
 .nav-pills > li > a{
 	border-radius: 0;
 	color: #000;
@@ -793,14 +797,14 @@ RESPONSIVE
 	}
 
 	#profile_img{
-		margin-left: 10%;
+		width: 45%;
 	}
 	#profile_img img{
 		width: 200px;
 		float: right;
 	}
 	#profile_name{
-		width: 500px;
+		width: 50%;
 	}
 }
 
