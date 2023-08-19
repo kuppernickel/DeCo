@@ -1,1 +1,1 @@
-# DeCo
+# Team DeCo
