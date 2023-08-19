@@ -84,9 +84,9 @@
 .wrap2 .rolling-list2 ul li .image-wrap { 
     flex-shrink: 0; 
 }
-.slide .image-wrap img{
-	width: 400px;
-}
+/* .slide .image-wrap img{
+	width: 350px;
+} */
 
 .rolling-list1.original {
     animation: rollingleft1 33s linear infinite;
@@ -367,7 +367,7 @@ textarea.form-control{
 }
 
 .section-text{
-	padding: 50px 0;
+	padding: 50px 5%;
 }
 
 .navbar-header{
@@ -788,6 +788,10 @@ RESPONSIVE
 		background-color: #eee;
 	}
 
+	.slide .image-wrap img{
+		width: 350px;
+	}
+
 	#profile_img{
 		margin-left: 10%;
 	}
@@ -826,6 +830,10 @@ RESPONSIVE
 	.drop{
 		padding-top: 0;
 		background-color: transparent;
+	}
+
+	.slide .image-wrap img{
+		width: 200px;
 	}
 	
 
