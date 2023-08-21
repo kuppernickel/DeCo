@@ -430,6 +430,7 @@ textarea.form-control{
 }
 .navbar-wooster #logo{
 	font-size: 4em;
+	top: 10px;
 }
 
 .main-head span{
