@@ -49,18 +49,50 @@ $(function(){
             $('#header-nav').removeClass('navbar-wooster');
         }
     });
-
-
-
 });
 
 function responsive_nav(){
     let CurrentFileName = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.lastIndexOf("."));
     // console.log(CurrentFileName);
-    if((CurrentFileName!='index') && ($(window).width() < 768)){
-        if($('section').hasClass('responsive_nav')===true){
-            $('.primary-menu').css('pointer-events', 'none');
+    if($(window).width() < 768){
+        if((CurrentFileName!='index')){
+            if($('section').hasClass('responsive_nav')===true){
+                $('.primary-menu').css('pointer-events', 'none');
+                if($('.navbar-nav').children().first().hasClass('responsive_drop')===true){
+                    $('.responsive_drop').css('height','100%');
+                    $('.drop').css({
+                        'height': 0,
+                        'opacity': 0
+                    });
+                    $('.navbar-nav').children().first().removeClass('responsive_drop');
+                    $('.navbar-nav').children().last().removeClass('responsive_drop');
+                    $('.responsive_drop').css('overflow', 'visible');
+                    $('.responsive_drop a').css('overflow', 'visible');
+                }
+
+                // console.log(document.getElementById('portfolio').className);
+                $('section').removeClass('responsive_nav');
+                $('#main-footer').removeClass('responsive_nav');
+                $('.links').removeClass('responsive_nav');
+                $('section').addClass('responsive_nav_fixed');
+                $('#main-footer').addClass('responsive_nav_fixed');
+                $('.links').addClass('responsive_nav_fixed');
+
+                setTimeout(drop_callback,600);
+            }else{
+                $('.primary-menu').css('pointer-events', 'none');
+                // console.log(document.getElementById('portfolio').className);
+                $('section').removeClass('responsive_nav_fixed');
+                $('#main-footer').removeClass('responsive_nav_fixed');
+                $('.links').removeClass('responsive_nav_fixed');
+                $('section').addClass('responsive_nav');
+                $('#main-footer').addClass('responsive_nav');
+                $('.links').addClass('responsive_nav');
+                setTimeout(drop_callback,600);
+            }
+        }else{
             if($('.navbar-nav').children().first().hasClass('responsive_drop')===true){
+                $('.primary-menu').css('pointer-events', 'none');
                 $('.responsive_drop').css('height','100%');
                 $('.drop').css({
                     'height': 0,
@@ -70,27 +102,8 @@ function responsive_nav(){
                 $('.navbar-nav').children().last().removeClass('responsive_drop');
                 $('.responsive_drop').css('overflow', 'visible');
                 $('.responsive_drop a').css('overflow', 'visible');
+                setTimeout(drop_callback,600);
             }
-
-            // console.log(document.getElementById('portfolio').className);
-            $('section').removeClass('responsive_nav');
-            $('#main-footer').removeClass('responsive_nav');
-            $('.links').removeClass('responsive_nav');
-            $('section').addClass('responsive_nav_fixed');
-            $('#main-footer').addClass('responsive_nav_fixed');
-            $('.links').addClass('responsive_nav_fixed');
-
-            setTimeout(drop_callback,600);
-        }else{
-            $('.primary-menu').css('pointer-events', 'none');
-            // console.log(document.getElementById('portfolio').className);
-            $('section').removeClass('responsive_nav_fixed');
-            $('#main-footer').removeClass('responsive_nav_fixed');
-            $('.links').removeClass('responsive_nav_fixed');
-            $('section').addClass('responsive_nav');
-            $('#main-footer').addClass('responsive_nav');
-            $('.links').addClass('responsive_nav');
-            setTimeout(drop_callback,600);
         }
     }
 }
@@ -124,8 +137,7 @@ function responsive_drop(){
             $('.responsive_drop a').css('overflow', 'hidden');
             $('.responsive_drop').animate({
                     height: 0
-                }
-            );
+            });
             $('.drop').animate({
                 display: 'block',
                 height: '98px',
