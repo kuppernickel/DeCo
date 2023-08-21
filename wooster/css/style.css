@@ -951,6 +951,11 @@ RESPONSIVE
 }
 @media (max-width: 374px){
 	#theme{
-		font-size: 2.7em;
+		font-size: 3em;
+	}
+}
+@media (max-width: 373px){
+	#theme{
+		font-size: 2em;
 	}
 }
