@@ -949,3 +949,8 @@ RESPONSIVE
 		transition: all 0.3s;
 	}
 }
+@media (max-width: 374px){
+	#theme{
+		font-size: 3em;
+	}
+}
