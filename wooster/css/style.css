@@ -167,6 +167,14 @@
 	float: left;
 }
 
+#chj:before{
+	display: inline-block;
+	content: '';
+	width: 7px;
+	height: 25px;
+	background-color: #000;
+}
+
 /* qna */
 .QnA a{
 	font-size: 1.1em;
@@ -931,7 +939,7 @@ RESPONSIVE
 	}
 	#link_prev{
 		float: left;
-		margin-left: 5%;
+		margin-left: 3%;
 	}
 	#link_prev img{
 		transform: rotate(180deg);
